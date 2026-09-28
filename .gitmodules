@@ -1,0 +1,3 @@
+[submodule "buildroot-external/buildroot"]
+	path = buildroot-external/buildroot
+	url = https://gitlab.com/buildroot.org/buildroot.git
