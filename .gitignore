@@ -1,4 +1,3 @@
 .claude/
-buildroot-output/
-
-.env
+buildroot-external/output/
+buildroot-external/dl/
