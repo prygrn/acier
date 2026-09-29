@@ -1,3 +1,4 @@
 .claude/
 buildroot-external/output/
 buildroot-external/dl/
+logs/
