@@ -8,7 +8,7 @@ for mandatory_file in "$IMAGES_DIR/Image" "$IMAGES_DIR/rootfs.ext4"; do
     [ -f "$mandatory_file" ] || { echo "Missing: $mandatory_file. Run make from $(dirname "$IMAGES_DIR")" >&2; exit 1; }
 done
 
-[ ! -x "$QEMU" ] || { echo "File $QEMU is not executable. Run make from $(dirname "$IMAGES_DIR")" >&2; exit 1; }
+[ -x "$QEMU" ] || { echo "File $QEMU is not executable. Run make from $(dirname "$IMAGES_DIR")" >&2; exit 1; }
 
 exec "${QEMU}" -M virt -cpu cortex-a53 -nographic -smp 1 -kernel "${IMAGES_DIR}"/Image \
     -append "rootwait root=/dev/vda console=ttyAMA0" -netdev user,id=eth0 \
